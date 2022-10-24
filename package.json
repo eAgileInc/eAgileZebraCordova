@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-eagile-zebra",
+  "version": "1.0.0",
+  "description": "eAgile Zebra RFID Cordova plugin",
+  "cordova": {
+    "id": "cordova-plugin-eagile-zebra",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "eAgile",
+  "license": "ISC"
+}

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-eagile-zebra" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>eAgileZebra</name>
+    <js-module name="eAgileZebra" src="www/eAgileZebra.js">
+        <clobbers target="eAgileZebra" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="eAgileZebra">
+                <param name="ios-package" value="eAgileZebra" />
+            </feature>
+        </config-file>
+        
+        <!--Source files-->
+        <source-file src="src/ios/eAgileZebra.m" />
+
+        <!--System framework-->
+        <framework src="Foundation.framework" />
+
+        <!--eAgileZebraSdk framework-->
+        <source-file src="src/ios/eAgileZebraSdk.framework" framework="true" target-dir="lib" />
+        <framework src="src/ios/eAgileZebraSdk.framework" embed="true" custom="true"/>
+
+    </platform>
+</plugin>
