@@ -1,6 +1,0 @@
-framework module eAgileZebraSdk {
-  umbrella header "eAgileZebraSdk.h"
-
-  export *
-  module * { export * }
-}

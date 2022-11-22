@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-eagile-zebra" version="1.0.0"
+<plugin id="cordova-plugin-eagile-zebra" version="1.1.0"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>eAgileZebra</name>
@@ -15,13 +15,16 @@
         
         <!--Source files-->
         <source-file src="src/ios/eAgileZebra.m" />
+        <header-file src="src/ios/eAgileZebraSdk.h" />
 
         <!--System framework-->
         <framework src="Foundation.framework" />
+        <framework src="ExternalAccessory.framework" />
+        <framework src="CoreBluetooth.framework" />
+        <framework src="libz.dylib" />
 
         <!--eAgileZebraSdk framework-->
-        <source-file src="src/ios/eAgileZebraSdk.framework" framework="true" target-dir="lib" />
-        <framework src="src/ios/eAgileZebraSdk.framework" embed="true" custom="true"/>
+        <source-file src="src/ios/libeAgileZebraSdk.a" framework="true" />
 
     </platform>
 </plugin>
