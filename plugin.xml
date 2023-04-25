@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-eagile-zebra" version="1.1.0"
+<plugin id="cordova-plugin-eagile-zebra" version="1.2.0"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>eAgileZebra</name>
@@ -11,6 +11,25 @@
             <feature name="eAgileZebra">
                 <param name="ios-package" value="eAgileZebra" />
             </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+            <array>
+                <string>com.zebra.scanner.SSI</string>
+                <string>com.motorolasolutions.scanner</string>
+                <string>com.symbol.rfd8X00_easytext</string>
+                <string>com.zebra.rfd8X00_easytext</string>
+            </array>
+        </config-file>
+        <!-- <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>bluetooth-central</string>
+                <string>bluetooth-peripheral</string>
+                <string>external-accessory</string>
+            </array>
+        </config-file> -->
+        <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
+            <string>This app uses bluetooth to connect to Zebra RFID devices.
+            </string>
         </config-file>
         
         <!--Source files-->
