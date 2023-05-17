@@ -31,6 +31,10 @@
             <string>This app uses bluetooth to connect to Zebra RFID devices.
             </string>
         </config-file>
+        <config-file target="*-Info.plist" parent="NSBluetoothAlwaysUsageDescription">
+            <string>This app uses bluetooth to connect to Zebra RFID devices.
+            </string>
+        </config-file>
         
         <!--Source files-->
         <source-file src="src/ios/eAgileZebra.m" />
